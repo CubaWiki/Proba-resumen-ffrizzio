@@ -167,7 +167,7 @@
     \end{teo}
 
     \begin{proof}
-      \[ B = B \cup \espm = B \cup \left( \bigcup_{i=1}^k A_i \right) = \bigcup_{i=1}^k (B \cap A_i) \]
+      \[ B = B \cap \espm = B \cap \left( \bigcup_{i=1}^k A_i \right) = \bigcup_{i=1}^k (B \cap A_i) \]
 
       Como $(B \cap A_i) \cap (B \cap A_j) = \varnothing \ \foralle i \neq j$, entonces:
       \[ \proba(B) = \proba \left( \bigcup_{i=1}^k (B \cap A_i) \right) = \sum_{i=1}^k \proba(B \cap A_i) = \sum_{i=1}^k \proba(B \mid A_i) \proba(A_i)\]
@@ -882,9 +882,9 @@
           $\dists{Bi}(n, p)$                & $\displaystyle \left( e^t p + 1 - p \right)^n$ \\
           $\dists{G}(p)$                    & $\displaystyle \frac{p e^t}{1 - (1 - p)e^t}$ \\
           $\dists{BN}(r,p)$                 & $\displaystyle \left( \frac{p e^t}{1 - (1 - p)e^t} \right)^r$ \\
-          $\dists{\poisson}(\lambda)$       & $\displaystyle e{\lambda(e^t - 1)}$ \\
+          $\dists{\poisson}(\lambda)$       & $\displaystyle e^{\lambda(e^t - 1)}$ \\
           $\dists{\unif}(A,B)$                  & $\displaystyle \frac{e^{tb} - e^{ta}}{t(b - a)}$ \\
-          $\dists{N}(\mu,\sigma^2)$         & $\displaystyle e^{\frac{\sigma^2 t^2}{2} + \sigma t}$ \\
+          $\dists{N}(\mu,\sigma^2)$         & $\displaystyle e^{\frac{\sigma^2 t^2}{2} + \mu t}$ \\
           $\dists{\Gamma}(\alpha,\lambda)$  & $\displaystyle \left( \frac{\lambda}{\lambda - t} \right)^\alpha$ \\
           $\dists{\exponen}(\lambda)$       & $\displaystyle \frac{\lambda}{\lambda - t}$
         \end{tabular}
@@ -975,7 +975,7 @@
     \begin{defi}
       Sea $(X,Y)$ un vector aleatorio continuo con función de densidad conjunta $f_{XY}(x,y)$. Las \deft{funciones de densidad marginal} de $X$ e $Y$ están dadas por
       \[ f_X(x) = \int_{-\infty}^{+\infty} f_{XY}(x,y) \,dy \]
-      \[ f_Y(x) = \int_{-\infty}^{+\infty} f_{XY}(x,y) \,dx \]
+      \[ f_Y(y) = \int_{-\infty}^{+\infty} f_{XY}(x,y) \,dx \]
     \end{defi}
 
     \begin{defi}
