@@ -1,5 +1,5 @@
-\documentclass[11pt]{article} 
-\usepackage[spanish]{babel} 
+\documentclass[11pt]{article}
+\usepackage[spanish]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper, margin=2.5cm]{geometry}
@@ -60,7 +60,7 @@
 \setlength{\tabcolsep}{25pt}
 \renewcommand{\arraystretch}{2}
 
-\begin{document} 
+\begin{document}
 \title{Probabilidades y Estadística (C)}
 \author{Franco Frizzo \\ \small (Basado en el apunte de Ana M. Bianco y Elena J. Martínez)}
 \date{}
@@ -68,7 +68,7 @@
 \tableofcontents
 \newpage
 
-\section{Conceptos básicos de probabilidad} 
+\section{Conceptos básicos de probabilidad}
 
   \begin{defi}
     Dado un experimento aleatorio (cualquier proceso o acción que genera observaciones y que puede ser repetible), su \deft{espacio muestral} asociado es el conjunto de todos sus resultados posibles. Lo notaremos $\espm$.
@@ -76,8 +76,8 @@
 
   \begin{defi}
     Se denomina \deft{suceso} o \deft{evento} a cualquier subconjunto del espacio muestral. Si $\espm$ es finito o infinito numerable, cualquier subconjunto es un evento. Si $\espm$ es infinito, “casi todo” subconjunto de $\espm$ es un evento.
-    
-    Un evento es \emph{elemental} o \emph{simple} si consiste de un único resultado individual y \emph{compuesto} si consiste de más de un evento elemental. 
+
+    Un evento es \emph{elemental} o \emph{simple} si consiste de un único resultado individual y \emph{compuesto} si consiste de más de un evento elemental.
   \end{defi}
 
   \begin{defi}
@@ -94,7 +94,7 @@
     \end{enumerate}
   \end{defi}
 
-  \begin{props} \ 
+  \begin{props} \
     \begin{enumerate}
       \item $\proba(A^C) = 1 - \proba(A)$, para cualquier evento $A$.
 
@@ -108,7 +108,7 @@
     \end{enumerate}
   \end{props}
 
-  \begin{proof} \ 
+  \begin{proof} \
     \begin{enumerate}
       \item $1 \underset{\text{A2}}{=} \proba(\espm) = \proba(A \cup A^C) \underset{\text{A3\textit{a}}}{=} \proba(A) + \proba(A^C) \Rightarrow \proba(A^C) = 1 - \proba(A)$.
 
@@ -130,9 +130,9 @@
     Sea un experimento aleatorio cuyo espacio muestral asociado $\espm$ es finito y sea $n = \# \espm$, el cardinal del conjunto. Diremos que el espacio es de \deft{equiprobabilidad} si los $n$ sucesos elementales tienen igual probabilidad, es decir si
     \[ \proba(E_i) = p \ \foralle i \]
   \end{defi}
-  
+
   Como $1 = \proba(\espm) = \sum_{i=1}^n \proba(E_i) = \sum_{i=1}^n p = np \Rightarrow p = \frac{1}{n} = \frac{1}{\#\espm}$.
-  
+
   Dado cualquier suceso $A$, $\proba(A) = \sum_{E \in A} \proba(E) = \sum_{E \in A} \frac{1}{n} = \frac{\#A}{\#\espm}$.
 
   \subsection{Probabilidad condicional}
@@ -141,7 +141,7 @@
       \[ \proba(A \mid B) = \frac{\proba(A \cap B)}{\proba(B)} \]
     \end{defi}
 
-    \begin{props} \ 
+    \begin{props} \
       \begin{enumerate}
         \item $\proba(A \mid B) \geq 0$ para todo suceso $A$.
         \item $\proba(\espm \mid B) = 1$.
@@ -192,7 +192,7 @@
     \begin{pro}
       Supongamos $\proba(B) > 0$, $A$ y $B$ son independientes si y sólo si $\proba(A \mid B) = \proba(A)$.
     \end{pro}
-    \begin{proof} \ 
+    \begin{proof} \
       \begin{itemize}
         \item[$(\Rightarrow)$] Si $\proba(B) > 0 \Rightarrow \proba(A \mid B) = \frac{\proba(A \cap B)}{\proba(B)}$ está bien definida. Por ser $A$ y $B$ independientes, $\proba(A \cap B) = \proba(A) \proba(B)$, entonces
         \[ \proba(A \mid B) = \frac{\proba(A) \proba(B)}{\proba(B)} = \proba(A) \]
@@ -246,7 +246,7 @@
   \end{defi}
 
     Como se observa, en general representaremos a las v.a. con letras mayúsculas ($X$, $Y$, $Z$, etc.), y a sus valores con letras minúsculas, es decir, $X(w) = x$ significa que $x$ es el número real asociado al resultado $w \in \espm$ a través de $X$.
-    
+
     Indicaremos con $R_X$ el rango de la v.a. $X$, es decir, el conjunto de sus valores posibles.
 
   \subsection{Variables aleatorias discretas}
@@ -260,7 +260,7 @@
       \[ p_X(x) = \proba(X = x) = \proba(\lbrace w \in \espm / X(w) = x \rbrace) \]
     \end{defi}
 
-    \begin{props} \ 
+    \begin{props} \
       \begin{enumerate}
         \item $p_x(x) \geq 0 \ \foralle x $.
         \item $\sum_{x \in R_X} p_x(x) = 1 $.
@@ -272,7 +272,7 @@
       \[ F_X(x) = \proba(X \leq x) = \sum_{y \leq x,\, y \in R_X} p_X(y) \]
     \end{defi}
 
-    \begin{props} \ 
+    \begin{props} \
       \begin{enumerate}
         \item $\foralle x \in \mathbb{R}, F_X(x) \in [0,1]$.
         \begin{proof}
@@ -292,7 +292,7 @@
         \item $F_X(x)$ es continua a derecha, es decir, $\lim_{h \to 0^+} F_X(x + h) = F_X(x)$.
 
         \item $\lim_{x \to +\infty} F_X(x) = 1$ y $\lim_{x \to -\infty} F_X(x) = 0$.
-        \begin{proof} \ 
+        \begin{proof} \
           \begin{itemize}
             \item $\lim_{x \to +\infty} F_X(x) = \lim_{x \to +\infty} \proba(X \leq x) = \lim_{x \to +\infty} \proba(w / X(w) \leq x) = \proba(\espm) = 1$.
             \item $\lim_{x \to -\infty} F_X(x) = \lim_{x \to -\infty} \proba(X \leq x) = \lim_{x \to -\infty} \proba(w / X(w) \leq x) = \proba(\varnothing) = 0$.
@@ -473,7 +473,7 @@
       \end{prop}
       \begin{proof}
         Sea $h(X) = aX + b$, entonces
-        \[ \begin{split} 
+        \[ \begin{split}
         \esp(h(X)) &= \int_{-\infty}^{+\infty} h(x) f_X(x) \,dx = \int_{-\infty}^{+\infty} (ax + b) f_X(x) \,dx = \\
         &= a \int_{-\infty}^{+\infty} x f_X(x) \,dx + b \int_{-\infty}^{+\infty} f_X(x) \,dx = a \esp(X) + b
         \end{split} \]
@@ -552,7 +552,7 @@
       \[ \esp(X) = np \qquad \text{y} \qquad \var(X) = np(1 - p) \]
       % \begin{proof}
       %   \[ \begin{split}
-      %   \esp(X) &= \sum_{k=0}^n k \binom{n}{k} p^k (1 - p)^{n - k} = \sum_{k = 1}^n k \binom{n}{k} p^k (1 - p)^{n - k} = \sum_{k = 1}^n k \frac{n!}{k!(n - k)!} p^k (1 - p)^{n - k} = \\ 
+      %   \esp(X) &= \sum_{k=0}^n k \binom{n}{k} p^k (1 - p)^{n - k} = \sum_{k = 1}^n k \binom{n}{k} p^k (1 - p)^{n - k} = \sum_{k = 1}^n k \frac{n!}{k!(n - k)!} p^k (1 - p)^{n - k} = \\
       %   &= \sum_{k = 1}^n \frac{n!}{(k - 1)! (n - k)!} p^k (1 - p)^{n - k} = np \sum_{k = 1}^n \frac{(n - 1)!}{(k - 1)! (n - k)!} p^{k - 1} (1 - p)^{n - k} = \\
       %   &= np \sum_{k = 1}^n \binom{n - 1}{k - 1} p^{k - 1} (1 - p)^{(n - 1) (k - 1)} \underset{(k - 1) = j}{=} np \sum_{j = 0}^{n - 1} \binom{n - 1}{j} p^j (1 - p)^{n - 1 - j} = \\
       %   &= np (p + (1 - p))^{n - 1} = np
@@ -570,7 +570,7 @@
 
       \paragraph{Función de probabilidad puntual.}
       Si $X \dist{G}(p)$, entonces
-      \[ p_X(x) = (1 - p)^{x - 1} \qquad \foralle x \in \mathbb{N} \]
+      \[ p_X(x) = p(1 - p)^{x - 1} \qquad \foralle x \in \mathbb{N} \]
 
       \paragraph{Función de distribución acumulada.}
       Si $X \dist{G}(p)$, entonces
@@ -751,7 +751,7 @@
         \[ \Gamma(\alpha) = \int_0^{+ \infty} x^{\alpha - 1} e^{- x} \, dx \]
       \end{defi}
 
-      \begin{props} \ 
+      \begin{props} \
         \begin{enumerate}
           \item Si $\alpha > 1$, $\Gamma(\alpha) = (\alpha - 1) \Gamma(\alpha - 1)$.
           \item Si $\alpha \in \mathbb{N}$, $\Gamma{\alpha} = (\alpha - 1)!$.
@@ -789,7 +789,7 @@
         Sea $X$ una v.a. continua. Decimos que $X$ tiene \deft{distribución exponencial} con parámetro $\lambda$, y lo notamos $X \dist{\exponen}(\lambda)$, si su función de densidad es
         \[ f_X(x) = \lambda e^{-\lambda x} \, \indi{(0,+\infty)}(x) \]
       \end{defi}
-        
+
       \begin{obs}
         Notemos que una distribución exponencial es un caso particular de la distribución gamma con parámetro $\alpha = 1$.
       \end{obs}
@@ -1097,7 +1097,7 @@
           \item $\vert \rho(X,Y) \vert = 1 \Leftrightarrow Y = aX + b$ con probabilidad 1, para ciertos valores reales $a \neq 0$ y $b$. Observemos que el coeficiente de correlación mide \emph{relación lineal} entre las variables aleatorias.
         \end{enumerate}
       \end{pro}
-      \begin{proof} \ 
+      \begin{proof} \
         \begin{enumerate}
           \item Por un lado,
           \[ \begin{split}
@@ -1110,7 +1110,7 @@
 
           Por otra parte, $\sigma_{aX + b} = \vert a \vert \sigma_X$ y $\sigma_{cX + d} = \vert c \vert \sigma_X$, y por lo tanto
           \[ \rho(aX + b,cY + d) = \frac{\cov(aX + b, cY + d)}{\sigma_{aX + b} \sigma_{cY + d}} = \frac{ac \cov(X,Y)}{\vert a \vert \vert c \vert \sigma_X  \sigma_Y} = \operatorname{sg}(ac) \rho(X,Y) \qedhere \]
-          
+
           \item Consideremos la función real
           \[ q(t) = \esp[(Y - \esp(Y)) - t(X - \esp(X))]^2 = \esp[V - tW]^2 \]
           siendo $V = Y - \esp(Y)$, $W = X - \esp(X)$. Como
@@ -1120,7 +1120,7 @@
           y, por lo tanto,
           \[ 4[\esp(VW)]^2 - 4 \esp(V^2) \esp(W^2) \leq 0 \Leftrightarrow \frac{[\esp(VW)]^2}{\esp(V^2) \esp(W^2)} \leq 1 \Leftrightarrow\]
           \[ \frac{[\esp((X - \esp(X))(Y - \esp(Y)))]^2}{\esp[(Y - \esp(Y))^2] \esp[(X - \esp(X))^2]} \leq 1 \Leftrightarrow [\rho(X,Y)]^2 \leq 1 \Leftrightarrow -1 \leq \rho(X,Y) \leq 1 \qedhere \]
-          
+
           \item \begin{itemize}
             \item[$(\Rightarrow)$] Si $\rho^2(X,Y) = 1$, volviendo a la demostración de la propiedad anterior, existe $q_0$ tal que $q(t_0) = 0$, es decir, que $\esp[V - t_0 W]^2 = 0$.
             Pero además, $E(V - t_0 W) = 0$, pues $V$ y $W$ tienen esperanza igual a 0. Entonces, la v.a. $V - t_0 W$ tiene varianza cero y por lo tanto es constante con probabilidad 1, es decir
@@ -1264,7 +1264,7 @@
       \end{pro}
       \begin{proof}
         La expresión para la esperanza puede ser probada mediante inducción en $n$. El caso $n = 2$ ya fue demostrado anteriormente. Supongamos ahora que la expresión es cierta para $n = k$ y probémosla para $n = k + 1$.
-        \[ \esp \left( \sum_{i=1}^{k+1} a_i X_i \right) = \esp \left( \sum_{i=1}^k a_i X_i + a_{k+1} X_{k+1} \right) = \esp (Y + a_{k+1} X_{k+1}) \] 
+        \[ \esp \left( \sum_{i=1}^{k+1} a_i X_i \right) = \esp \left( \sum_{i=1}^k a_i X_i + a_{k+1} X_{k+1} \right) = \esp (Y + a_{k+1} X_{k+1}) \]
         siendo $Y = \sum_{i=1}^k a_i X_i$. Como para $n = 2$ la igualdad se cumple, se obtiene
         \[ \esp \left( \sum_{i=1}^{k+1} a_i X_i \right) = \esp(Y + a_{k+1} X_{k+1}) = \esp(Y) + a_{k+1} \esp(X_{k+1}) = \esp \left( \sum_{i=1}^k a_i X_i \right) + a_{k+1} \esp(X_{k+1}) \]
         y, utilizando la hipótesis inductiva,
@@ -1467,7 +1467,7 @@
       \item[Muestra:] Cualquier subconjunto de sujetos o unidades de análisis de la población en estudio.
       \item[Unidad de análisis o de observación:] Objeto bajo estudio. Puede ser una persona, una familia, un país, una institución o, en general, cualquier objeto.
       \item[Variable:] Cualquier característica de la unidad de observación que interese registrar y que en el momento de ser registrada puede ser transformada en un número.
-      \item[Valor de una variable, dato, observación o medición:] Número que describe a la característica de interés en una unidad de observación particular. 
+      \item[Valor de una variable, dato, observación o medición:] Número que describe a la característica de interés en una unidad de observación particular.
       \item[Caso o registro:] Conjunto de mediciones realizadas sobre una unidad de observación.
     \end{description}
 
@@ -1494,7 +1494,7 @@
       \subparagraph{Varianza muestral.} $\displaystyle S^2 = \frac{\sum_{i=1}^n (x_i - \overline{x})^2}{n - 1}$.
 
       \subparagraph{Desvío estándar muestral.} $S = \sqrt{S^2}$.
-      
+
       \subparagraph{Distancia intercuartil.} $d_I = \text{cuartil superior} - \text{cuartil inferior} = x_{0.75} - x_{0.25}$, donde $x_\alpha$, $0 \leq \alpha \leq 1$, es el $100 \alpha$-ésimo percentil del la muestra, es decir, el valor por debajo del cual se encuentra el $100 \alpha \%$ de la muestra ordenada.
 
       \subparagraph{Distancia entre cuartos.} $d_C = \text{cuarto superior} - \text{cuarto inferior}$, donde los cuartos inferior y superior son la mediana de la primera y la segunda mitad de la muestra ordenada, respectivamente (en caso de que el tamaño de la muestra sea impar, se extienden ambas mitades con la mediana de la muestra completa).
@@ -1635,9 +1635,9 @@
           \item $\displaystyle \sqrt{n} \frac{\overline{X} - \mu}{S} \dist{t}_{n-1}$.
         \end{enumerate}
       \end{pro}
-      \begin{proof} \ 
+      \begin{proof} \
         \begin{enumerate}
-          \item[1.] Ya hemos visto que cualquier combinación lineal de v.a. normales independientes es normal, y el promedio es una combinación lineal particular. 
+          \item[1.] Ya hemos visto que cualquier combinación lineal de v.a. normales independientes es normal, y el promedio es una combinación lineal particular.
           \item[2 y 3.] Están fuera del alcance de este curso.
           \item[4.] Resulta de 1, 2 y 3, pues
           \[ \sqrt{n} \frac{\overline{X} - \mu}{\sigma} \dist{N}(0,1) \qquad \text{y} \qquad \frac{(n - 1) S^2}{\sigma^2} \dist{\chi}^2_{n - 1} \]
@@ -1661,14 +1661,14 @@
       \paragraph{Varianza de una distribución normal con media conocida.} Sea $X_1, \dots, X_n$ una muestra aleatoria de una distribución $\dists{N}(\mu_0,\sigma^2)$, con media $\mu_0$ conocida. Entonces
       \[ \frac{X_i - \mu_0}{\sigma} \dist{N}(0,1) \quad \foralle 1 \leq i \leq n \Rightarrow \left( \frac{X_i - \mu_0}{\sigma} \right)^2 \dist{\chi}_1^2 = \dists{\Gamma}\left( \frac{1}{2}, \frac{1}{2} \right) \quad \foralle 1 \leq i \leq n \]
       Como además las variables aleatorias son independientes,
-      \[ \sum_{i = 1}^n \left( \frac{X_i - \mu_0}{\sigma} \right)^2 \dist{\chi}_n^2 = \dists{\Gamma}\left( \frac{1}{2}, \frac{1}{2} \right) \Rightarrow \proba\left( \chi_{n, 1 - \frac{\alpha}{2}}^2 \leq \frac{\sum_{i=1}^n (X_i - \mu_0)^2}{\sigma^2} \leq \chi_{n, \frac{\alpha}{2}}^2 \right) = 1 -\alpha \]
+      \[ \sum_{i = 1}^n \left( \frac{X_i - \mu_0}{\sigma} \right)^2 \dist{\chi}_n^2 = \dists{\Gamma}\left( \frac{n}{2}, \frac{1}{2} \right) \Rightarrow \proba\left( \chi_{n, 1 - \frac{\alpha}{2}}^2 \leq \frac{\sum_{i=1}^n (X_i - \mu_0)^2}{\sigma^2} \leq \chi_{n, \frac{\alpha}{2}}^2 \right) = 1 -\alpha \]
       de donde se obtiene el siguiente intervalo de confianza de nivel $1 - \alpha$ para $\sigma^2$
       \[ \left[ \frac{\sum_{i = 1}^n (X_i - \mu_0)^2}{\chi_{n,\frac{\alpha}{2}}^2} , \frac{\sum_{i = 1}^n (X_i - \mu_0)^2}{\chi_{n,1 - \frac{\alpha}{2}}^2} \right] \]
 
       \paragraph{Varianza de una distribución normal con media desconocida.} Sea $X_1, \dots, X_n$ una muestra aleatoria de una distribución $\dists{N}(\mu,\sigma^2)$. Entonces
-      \[ \frac{(n - 1) S^2}{\sigma^2} \dist{\chi_{n-1}^2} \Rightarrow \proba\left( \leq \chi_{n - 1, 1 - \frac{\alpha}{2}} \frac{(n - 1) S^2}{\sigma^2} \leq \chi_{n - 1, \frac{\alpha}{2}} \right) = 1 - \alpha \]
+      \[ \frac{(n - 1) S^2}{\sigma^2} \dist{\chi}_{n-1}^2 \Rightarrow \proba\left( \chi^2_{n - 1, 1 - \frac{\alpha}{2}} \leq \frac{(n - 1) S^2}{\sigma^2} \leq \chi^2_{n - 1, \frac{\alpha}{2}} \right) = 1 - \alpha \]
       de donde se deduce el siguiente intervalo de confianza de nivel $1 - \alpha$ para $\sigma^2$
-      \[ \left[ \frac{(n-1) S^2}{\chi_{n - 1, \frac{\alpha}{2}}} , \frac{(n-1) S^2}{\chi_{n - 1, 1 - \frac{\alpha}{2}}} \right] \]
+      \[ \left[ \frac{(n-1) S^2}{\chi^2_{n - 1, \frac{\alpha}{2}}} , \frac{(n-1) S^2}{\chi^2_{n - 1, 1 - \frac{\alpha}{2}}} \right] \]
 
     \subsubsection{Método general para obtener intervalos de confianza}
 
@@ -1685,7 +1685,7 @@
       \begin{defi}
         Sea $X_1, \dots, X_n$ una muestra aleatoria de una distribución que depende de un parámetro $\theta$. Dadas dos sucesiones $\lbrace a_n(X_1,\dots,X_n) \rbrace$ y $\lbrace b_n(X_1,\dots,X_n) \rbrace$, tales que
         \[ \lim_{n \to \infty} \proba(a_n(X_1,\dots,X_n) \leq \theta \leq b_n(X_1,\dots,X_n)) = 1 - \alpha \]
-        la sucesión de intervalos $[a_n(X_1,\dots,X_n), b_n(X_1,\dots,X_n)]$ es una sucesión de \deft{intervalos de confianza de nivel asintótico $1 - \boldsymbol\alpha$} para el parámetro $\theta$. También se dice que, si $n$ es suficientemente grande, el intervalo $[a_n(X_1,\dots,X_n), b_n(X_1,\dots,X_n)]$ tiene nivel aproximado $1 - \alpha$.
+        la sucesión de intervalos $[a_n(X_1,\dots,X_n), b_n(X_1,\dots,X_n)]$ es una sucesión de \deft{intervalos de confianza de nivel asintótico} $1 - \alpha$ para el parámetro $\theta$. También se dice que, si $n$ es suficientemente grande, el intervalo $[a_n(X_1,\dots,X_n), b_n(X_1,\dots,X_n)]$ tiene nivel aproximado $1 - \alpha$.
       \end{defi}
 
       \paragraph{Intervalo de confianza de nivel aproximado para la media de una distribución cualquiera.}
@@ -1695,7 +1695,7 @@
         Sabemos que $\overline{X}$ es un estimador insesgado y consistente de $\mu$. Si bien no conocemos su distribución exacta, sabemos que
         \[ \sqrt{n} \frac{\overline{X} - \mu}{\sigma} \tiende{d} \dists{N}(0,1) \]
 
-        Si $\sigma^2$ es conocido, puede usarse esta función como pivote para obtener un intervalo de nivel aproximado. Si $\sigma^2$ es desconocido, podemos aplicar la siguiente propiedad 
+        Si $\sigma^2$ es conocido, puede usarse esta función como pivote para obtener un intervalo de nivel aproximado. Si $\sigma^2$ es desconocido, podemos aplicar la siguiente propiedad
 
         \begin{prop}
           \[ \left. \begin{array}{l} Y_n \tiende{d} Y \\ U_n \tiende{p} a \end{array} \right\rbrace \quad \Longrightarrow \quad U_n Y_n \tiende{d} a Y \]
@@ -1739,18 +1739,18 @@
 
           Buscando las raíces de esta ecuación de segundo grado, que llamaremos $\hat p_1$ y $\hat p_2$, obtenemos un intervalo para $p$ de nivel aproximado $1 - \alpha$ dado por
           \[ [\hat p_1, \hat p_2] \]
-          
+
         \end{enumerate}
 
   \subsection{Tests de hipótesis}
 
     \begin{defi}
-      Un \deft{test de hipótesis} es una regla que permite decidir, basándose en una muestra, entre dos hipótesis referidas a un parámetro de una distribución. A la hipótesis que implica que no hay cambio con respecto a la situación inicial se la denomina \emph{hipótesis nula} y se designa $H_0$. La segunda hipótesis se denomina \emph{hipótesis alternativa} y se designa $H_1$.
-      El test se basa en un \emph{estadístico}, que es una función o función de la muestra, y en una \emph{zona de rechazo}, que es un conjunto de valores del estadístico para los cuales se rechaza la hipótesis $H_0$ en función de $H_1$.
+      Un \deft{test de hipótesis} es una regla que permite decidir, basándose en una muestra, entre dos hipótesis referidas a un parámetro de una distribución. La hipótesis que implica que no hay cambio con respecto a la situación inicial se denomina \emph{hipótesis nula} y se designa $H_0$. La segunda hipótesis se denomina \emph{hipótesis alternativa} y se designa $H_1$.
+      El test se basa en un \emph{estadístico}, que es una función o función de la muestra, y en una \emph{zona de rechazo}, que es un conjunto de valores del estadístico para los cuales se rechaza la hipótesis $H_0$ en favor de $H_1$.
     \end{defi}
 
     \begin{defi}
-      En un test que contrasta las hipótesis $H_0$ y $H_1$, llamamos \deft{nivel de significación} del test, y denotamos $\alpha$, a la probabilidad de cometer un error de tipo I, es decir, de rechazar $H_0$ cuando es verdadera. 
+      En un test que contrasta las hipótesis $H_0$ y $H_1$, llamamos \deft{nivel de significación} del test, y denotamos $\alpha$, a la probabilidad de cometer un error de tipo I, es decir, de rechazar $H_0$ cuando es verdadera.
 
       Por otra parte, denotamos $\beta$ a la probabilidad de cometer un error de tipo II, es decir, de no rechazar $H_0$ cuando es falsa.
     \end{defi}
@@ -1856,7 +1856,7 @@
           \item $ H_0 : \mu = \mu_0 \text{ (o $\mu \geq \mu_0$)} \qquad \text{vs.} \qquad H_1 : \mu < \mu_0 $.
           \item $ H_0 : \mu = \mu_0 \qquad \text{vs.} \qquad H_1 : \mu \neq \mu_0 $.
         \end{enumerate}
-        y que $n$ es suficientemente grande. Utilizando como estadístico 
+        y que $n$ es suficientemente grande. Utilizando como estadístico
         \[ T = \sqrt{n} \frac{\overline{X} - \mu_0}{S} \]
         las siguientes regiones de rechazo proveen tests de nivel aproximado $\alpha$ para cada una de las hipótesis
         \begin{enumerate}
@@ -1959,7 +1959,7 @@
     La cantidad $\pi_j$ también es igual a la proporción de tiempo que pasa el sistema, a largo plazo, en el estado $j$. En efecto, sea $P_j$ esta proporción. Entonces, como la proporción de tiempo que el sistema pasa en el estado $k$ es $P_k$, y la cadena pasa del estado $k$ al estado $j$ con probabilidad $p_{kj}$, tenemos que la proporción de tiempo que la cadena de Márkov pasa entrando al estado $j$ desde el estado $k$ es igual a $P_k p_{kj}$. Sumando sobre $k$, tenemos que $P_j = \sum_k P_k p_{kj}$. Como es claro que
     \[ \sum_j P_j = 1 \]
     y dado que los $\pi_j$ son solución única de la ecuación anterior, deducimos que $P_j = \pi_j \ \foralle j \in \espm$.
-    
+
     Esta interpretación de los valores $\pi_j$ es válida en general, incluso para cadenas no ergódicas.
 
     De la ecuación \eqref{markov-erg-1}, podemos deducir que la medida invariante de la cadena es un autovector a la izquierda de la matriz de transición con autovalor $1$, es decir, $ \pi P = \pi $. Esto quiere decir que
